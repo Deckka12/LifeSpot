@@ -3,44 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
-    <link href="../Static/CSS/Index.css" rel="stylesheet" type="text/css">
-    <style>
-        /* Свойства стиля элемента. Подробнее о них - в модуле по CSS */
-        .block {
-            border: 2px solid black;
-            background-color: azure;
-            padding: 10px;
-        }
-    </style>
-</head>
-<header id="header-index">
-    <!--Заголовок страницы-->
-    <h1>LifeSpot - прямые трансляции с улиц</h1>
-    <!--Параграф-->
-    <p>Покажем, что происходит прямо сейчас</p>
-</header>
-<body>
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <!--Санкт-Петербург-->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wCcMcaiRbhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <!--Лондон-->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <link href="../Static/CSS/index.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
+    <script>
+        //checkAge();
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @Denchik0000!"),
+            30000);
+        handleSession()
 
-    </div>
-    <div>
-        <input type="text" class="block1" name="Search" />
+        sessionLog();
+
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+    </script>
+</head>
+<!--SIDEBAR-->
+<body>
+    <header>
+        <h1 id="main-words">LiseSpot - прямые трансляции с улиц!</h1>
+        <p>Сейчас мы покажем то, что происходит</p>
+        <input type="text" oninput="
+       const inputParseFunction = function(){
+           return document.getElementsByTagName('input')[0].value.toLowerCase();
+       }
+
+       filterContent( inputParseFunction )
+
+" size=50%>
+    </header>
+    <div class="block">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Нью-Йорк, Брайант парк</h3>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QOjmvL3e7Lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Токио</h3>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Лондонский автобус</h3>
+        </div>
     </div>
 </body>
-<aside id="sidebar">
-    <div class="navbar">
-        <p>Все трансляции</p>
-        <p>О проекте</p>
-    </div>
-</aside>
-
-<footer>
-    <p>LifeSpot - все права защищены</p>
-    <p>Связаться с нами: contact@lifespot.ru</p>
-</footer>
+<!--FOOTER-->
 </html>

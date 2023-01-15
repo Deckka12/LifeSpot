@@ -1,38 +1,27 @@
-﻿/* Простые селекторы*/
+﻿.block {
+    background-color: azure;
+    padding: 10px;
+}
+
 .video-container {
     display: inline-block;
-    margin-top: 0.5em;
-    padding-left: 1%;
-    padding-top: 1%;
-}
-.block1:hover {
-    color: red;
-    background: #f0f8ff;
-}
-header {
-    color: black;
-    padding-left: 1%;
-    padding-top: 1.2%;
-}
-/*Стиль хедера для главной страницы имеет приоритет,
-так как используется селектор по идентификатору*/
-#header-index {
-    color: #44453f;
-}
-.navbar p {
-    color: darkgray;
-    padding-left: 15%;
-}
-    /* Стили панели навигации при наведении мышью */
-    .navbar p:hover {
-        color: aliceblue;
-    }
-
-header {
-    padding-left: 1%;
-    padding-top: 1.2%;
 }
 
+.buttons {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 20px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, red 0%, green 51%, yellow 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
 footer {
     position: absolute;
     bottom: 0;
@@ -40,25 +29,95 @@ footer {
     color: dimgrey;
     line-height: 66%;
     padding-left: 1%;
+    padding-bottom: 1%;
+}
+
+.navbar {
+    color: darkgray;
+    padding-left: 15%;
+}
+
+navbar:hover {
+    background-color: crimson;
+}
+
+header {
+    padding-left: 1%;
 }
 
 aside {
-    height: 100%; 
+    height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
     width: 10%;
-    position: absolute; 
-    z-index: 1;
-    top: 0; 
+    position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+    z-index: 1; /* Сайд-бар будет поверх остальных элементов */
+    top: 0; /* Сайдбар будет в самой верхней части страницы */
     left: 0;
-    background-color: #111; 
-    overflow-x: hidden; 
-    padding-top: 2%;
-    font-size: large;
+    background-color: lightslategray; /* Черный цвет фона (задан в виде кода) */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    padding-top: 20px;
 }
 
 body {
     padding-left: 11%;
 }
 
-header, footer, body, .video-container {
-    background-color: linen;
+.review-container, .review-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+.review-container, .review-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.review-text {
+    display: block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+header, footer, body, .video-container, .block {
+    background-color: #e1ada3;
+}
+
+.block, .navbar, .video-container, header, body, footer, aside, .navbar {
+    font-style: normal;
+}
+
+#hover-link:hover {
+    color: aqua;
+}
+
+#main-words {
+    font-style: italic;
+    font-size: 50px;
+}
+
+.input-field {
+    height: 20px;
+    width: 400px;
+    font-size: 18px;
+}
+
+    .input-field:focus {
+        color: cadetblue;
+    }
+
+.reviews, .review-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.review-text {
+    display: block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
 }
