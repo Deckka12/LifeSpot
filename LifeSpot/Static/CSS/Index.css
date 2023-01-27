@@ -36,7 +36,13 @@ footer {
     color: darkgray;
     padding-left: 15%;
 }
-
+.text {
+    color: darkgray;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
 navbar:hover {
     background-color: crimson;
 }
@@ -60,7 +66,11 @@ aside {
 body {
     padding-left: 11%;
 }
-
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: initial;
+}
 .review-container, .review-button {
     display: inline-block;
     margin-top: 0.5em;
